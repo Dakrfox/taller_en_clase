@@ -8,16 +8,19 @@ Administración y Contabilidad de la siguiente forma:
     c. Administración: 35% del valor de la donación
     d. Contabilidad: lo que resta de la donación
 """
-def ope(donacion,percentage):
-    op = float(donacion)*percentage
-    return op
+
     
 print("reparticion de dinero de donacion")
-don = input("digite el valor de la donacion: \n")
-print(f"a telecomunicacion se le dara el 10% {ope(don,0.1)}$")
-print(f"a sistemas se le dara el 25% {ope(don,0.25)}$")
-print(f"a administracion se le dara el 35% {ope(don,0.35)}$")
-print(f"a contabilidad se le dara el 30% {ope(don,0.30)}$")
+don = int(input("digite el valor de la donacion: \n"))
+administracion = don*0.35
+sistemas = administracion*0.25
+tc = sistemas*0.1
+sum = administracion + sistemas + tc
+resta = don-sum
+print(f"a telecomunicacion se le dara {tc}")
+print(f"a sistemas se le dara {sistemas}$")
+print(f"a administracion se le dara {administracion}$")
+print(f"a contabilidad se le dara {resta}$")
 
 
 
